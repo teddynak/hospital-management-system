@@ -1,0 +1,27 @@
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+=== Imaging Centre Wandegeye (Java Backend + MongoDB) ===
+MongoDB : mongodb://localhost:27017/hms
+API     : http://localhost:8080/hms/api
+Endpoints:
+  POST /auth/login   | GET /auth/me      - staff & admin login/session
+  POST /auth/register                    - create worker account [admin]
+  POST /auth/logout                       - logout (invalidates token)
+  GET  /admin/dashboard                   - admin stats [admin]
+  GET/POST /admin/users | DELETE /admin/users/{id} - admin users [admin]
+  GET  /patients   | POST /patients       - patient registration
+  GET  /patients/{id}                     - patient detail
+  POST /opd          | GET /opd           - OPD consultation
+  POST /admissions   | GET /admissions    - admission
+  POST /stays        | GET /stays         - hospital stay
+  POST /discharges   | GET /discharges    - discharge
+  POST /certificates | GET /certificates  - issue certificates
+  POST /forms        | GET /forms         - issue forms
+  POST /labs         | GET /labs          - lab results
+  POST /payroll      | GET /payroll       - payroll
+  GET/POST /config                        - system configuration
+  GET  /reports                           - reports
+Admin login:    admin / admin123
+Worker login:   worker / worker123 (also: doctor/labtech)
+Press Ctrl+C to stop.
